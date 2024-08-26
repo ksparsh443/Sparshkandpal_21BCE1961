@@ -1,0 +1,194 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    transition: all 0.2s linear !important;
+}
+
+body {
+    background-color: rgb(99, 96, 96);
+    display: grid;
+    place-items: center;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin: 50px 0;
+    font-size: 3rem;
+}
+
+input {
+    margin-bottom: 20px;
+    padding: 5px;
+    font-size: 1.2rem;
+}
+
+button {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+img {
+    width: 30px;
+}
+
+#cont {
+    display: grid;
+    grid-template-columns: repeat(5, 100px); /* 5 columns of 100px each */
+    grid-template-rows: repeat(5, 100px);    /* 5 rows of 100px each */
+    gap: 5px; /* Optional: Adds some space between buttons */
+}
+
+.btn {
+    font-size: 2rem;
+    width: 100px;
+    height: 100px;
+    color: white;
+    cursor: pointer;
+    background-color: rgb(78, 79, 80);
+    border: none; /* Optional: Removes any default button border */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn:hover {
+    background-color: rgb(45, 46, 47);
+}
+
+/* Chess board styling */
+#chess-board {
+    border: solid 3px black;
+    background: #eee;
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 375px; /* 5x75px squares */
+    height: 375px; /* 5x75px squares */
+}
+
+.square {
+    width: 75px;
+    height: 75px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-align: center;
+    display: inline-block;
+    line-height: 75px;
+    pointer-events: all; 
+    background-color: #eee;
+}
+
+.square.white {
+    background: white;
+}
+.dragging {
+    opacity: 0.5; /* Example visual feedback */
+  }
+.square.black {
+    background: black;
+}
+
+/* Chess piece styles */
+.chess-piece i {
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    max-width: 90%;
+    pointer-events: all; 
+}
+
+.chess-piece i.hero1 {
+    color: rgb(32, 183, 93); /* Hero1 color */
+    border: solid 1px rgb(32, 183, 93);
+}
+
+.chess-piece i.hero2 {
+    color: rgb(255, 0, 0); /* Hero2 color */
+    border: solid 1px rgb(255, 0, 0);
+}
+
+.chess-piece i.hero3 {
+    color: rgb(0, 0, 255); /* Hero3 color */
+    border: solid 1px rgb(0, 0, 255);
+}
+
+.chess-piece i.pawn1 {
+    color: rgb(0, 0, 0); /* Pawn color 1 */
+    border: solid 1px rgb(0, 0, 0);
+}
+
+.chess-piece i.pawn2 {
+    color: rgb(128, 128, 128); /* Pawn color 2 */
+    border: solid 1px rgb(128, 128, 128);
+}
+
+.chess-piece i.pawn3 {
+    color: rgb(255, 255, 255); /* Pawn color 3 */
+    border: solid 1px rgb(255, 255, 255);
+}
+
+/* Selected and capturable square styles */
+.square.piece-selected {
+    background-color: yellow !important;
+}
+
+.square.square-selected {
+    background: orange !important;
+}
+
+.square.capturable-selected {
+    background: red !important;
+}
+
+/* Chess panel styles */
+.chess-panel {
+    padding: 0.5rem;
+    margin: 1rem auto;
+}
+
+.chess-panel-header {
+    text-align: center;
+}
+
+.chess-panel.white {
+    background: white;
+}
+
+.chess-panel.black {
+    background: black;
+}
+
+.white-text {
+    color: white;
+}
+
+.taken-pieces {
+    padding: 0.5rem;
+}
+
+.chess-panel.white .taken-pieces {
+    border: solid 1px black;
+}
+
+.chess-panel.black .taken-pieces {
+    border: solid 1px white;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+    .chess-piece i {
+        margin-top: 0.5rem;
+        width: 15px;
+        height: 15px;
+        padding: 0.3rem;
+        line-height: 0.5;
+    }
+    .square {
+        height: 80px;
+        width: 80px;
+    }
+}
