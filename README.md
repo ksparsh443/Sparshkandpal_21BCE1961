@@ -1,74 +1,102 @@
-# Sparshkandpal_21BCE1961
-Turn-based Chess-like Game with Websocket Communication
 
 
-This is my submission for the Advanced chess like game on HTML, CSS and JAVA Script
+# Turn-Based Chess-like Game with WebSocket Communication
 
-THe following code uses Socketio to establis a connection between server and client and then based on the logic for hero1, hero2, hero3, and pawns move the same.
+## Overview
 
-Game Setup
-The game is played between two players on a 5x5 grid.
-Each player controls a team of 5 characters, which can include Pawns, Hero1, and Hero2.
-Players arrange their characters on their respective starting rows at the beginning of the game
+This project is a turn-based chess-like game developed using HTML, CSS, and JavaScript. It utilizes Socket.io for real-time communication between the server and the client. Players control teams of characters on a 5x5 grid, with each player managing 5 characters including Pawns, Hero1, and Hero2.
 
+## Game Setup
 
+- **Grid:** 5x5
+- **Players:** 2
+- **Characters per Player:** 5 (including Pawns, Hero1, Hero2)
+- **Objective:** Players arrange their characters on their respective starting rows and play the game using the movement rules defined for each character.
 
-Running the game:
+## Running the Game
 
-1. Open the Terminal
-2. enter node i
-3. Enter the command : node index.js
-4. This is will run the programm on local host 3000 server 
-5. Open two different Google chrome tabs and enter localhost:3000 in both
-6. Enter your name and your friend name in the tabs respectively and start enjoying the game
+### Local Server Setup
 
-or 
+1. **Open Terminal**
 
-Using a Local HTTP Server: You can use a local server to serve your HTML and JavaScript files. Here are a few options:
+2. **Initialize Node.js Project**
+   ```bash
+   npm init -y
+   ```
 
-Using http-server (Node.js Package):
+3. **Install Dependencies**
+   ```bash
+   npm install ws socket.io
+   ```
 
-bash
-Copy code
-npx http-server
-This command will serve files in the current directory. Install http-server globally with npm install -g http-server if you want to use it without npx.
+4. **Start the Server**
+   ```bash
+   node index.js
+   ```
+   This command will run the server on `localhost:3000`.
 
-Using live-server (Node.js Package):
+5. **Open the Game**
+   - Open two different Google Chrome tabs.
+   - Enter `localhost:3000` in both tabs.
+   - Enter your name and your friend's name in each tab respectively.
 
-bash
-Copy code
-npx live-server
-Similar to http-server, but with automatic browser refresh on file changes. Install it globally with npm install -g live-server.
+### Using a Local HTTP Server
 
-Running a Development Server with Frameworks: If you’re using a framework like React, Vue, or Angular, you can use their respective CLI commands:
+Alternatively, you can use a local HTTP server to serve your HTML and JavaScript files:
 
-React (Create React App):
+- **Using http-server (Node.js Package)**
+  ```bash
+  npx http-server
+  ```
+  - Install globally with: `npm install -g http-server`
 
-bash
-Copy code
-npm start
-Vue (Vue CLI):
+- **Using live-server (Node.js Package)**
+  ```bash
+  npx live-server
+  ```
+  - Install globally with: `npm install -g live-server`
 
-bash
-Copy code
-npm run serve
-Angular (Angular CLI):
+### Running a Development Server with Frameworks
 
-bash
-Copy code
-ng serve
-Using a Browser-based Environment for Testing: If you need to test client-side JavaScript without a full server setup, you can use a browser-based tool or online service like:
+If you’re using a framework like React, Vue, or Angular, you can use their respective CLI commands:
 
-CodePen, JSFiddle, or JSBin: These platforms allow you to write and test HTML, CSS, and JavaScript code in the browser.
-Automated Testing: If you’re running automated tests that involve the DOM, you might use tools like:
+- **React (Create React App)**
+  ```bash
+  npm start
+  ```
 
-Jest with jsdom: Jest runs tests in a simulated browser environment provided by jsdom.
+- **Vue (Vue CLI)**
+  ```bash
+  npm run serve
+  ```
 
-bash
-Copy code
-npm test
-Puppeteer: For end-to-end testing in a headless browser.
+- **Angular (Angular CLI)**
+  ```bash
+  ng serve
+  ```
 
-bash
-Copy code
-npx puppeteer
+### Browser-Based Environments for Testing
+
+For client-side JavaScript testing without a full server setup, you can use:
+
+- **CodePen, JSFiddle, or JSBin**: Write and test HTML, CSS, and JavaScript code directly in the browser.
+
+### Automated Testing Tools
+
+For automated tests involving the DOM, you might use:
+
+- **Jest with jsdom**
+  ```bash
+  npm test
+  ```
+
+- **Puppeteer**
+  ```bash
+  npx puppeteer
+  ```
+
+## Notes
+
+- Ensure you have Node.js installed to run the server.
+- For production environments, consider additional security and performance enhancements.
+
